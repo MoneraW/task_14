@@ -5,6 +5,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.http import JsonResponse
 from django.db.models import Q
 
+
 def restaurant_favorite(request, restaurant_id):
     restaurant_obj = Restaurant.objects.get(id=restaurant_id)
     if request.user.is_anonymous:

@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 from restaurants import views
 from api.views import RestaurantListView
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     
@@ -37,6 +38,7 @@ urlpatterns = [
     path('no-access/',views.no_access ,name='no-access'),
 
     path('api/list/', RestaurantListView.as_view(), name='api-list'),
+    
 ]
 
 if settings.DEBUG:
